@@ -1,0 +1,14 @@
+import express from 'express';
+import * as controller from './acebillpay.controller';
+const router = express.Router();
+router.post('/auto-access-token', controller.autoAccessToken);
+router.post('/check-bill', controller.checkBill);
+router.post('/pay-bill', controller.payBill);
+router.get('/get-bill-details', controller.getBillDetails);
+router.post('/validate-bill', controller.validateBill);
+router.post('/pay-bill-status', controller.payBillStatus);
+router.post('/get-biller-list', controller.getBillerList);
+router.post('/get-payment-history', controller.getPaymentHistory);
+router.post('/reverse-payment', controller.reversePayment);
+router.post('/cancel-payment', controller.cancelPayment);
+export default router;
